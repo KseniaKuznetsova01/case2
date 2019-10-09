@@ -27,6 +27,7 @@ if member == '1':
         print(0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
                     405100 - 186351) + 0.35 * (406750 - 405101) + 0.396 * (income - 406751))
 elif member == '2':
+    M = 7950
     print(lc.TXT_CATEGORY)
     income = int(input())
     seven = income - 457600
@@ -77,8 +78,8 @@ elif member == 2:
     person = lc.PERSON_2
 else:
     person = lc.PERSON_3
+    N1 = 12*(N-M)
 print(lc.RESULT_1, income)
 print(lc.RESULT_2, N)
-print(lc.RESULT_3, )
-print(lc.RESULT_4, )
-def func(local)
+print(lc.RESULT_3, M)
+print(lc.RESULT_4, N1)
