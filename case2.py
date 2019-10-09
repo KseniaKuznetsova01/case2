@@ -5,13 +5,15 @@ Panukova Ekaterina(0%)"""
 
 import local as lc
 
+N = 0
+M = 0
+N1 = 0
 print(lc.HELLO)
 member = int(input())
+print(lc.TXT_CATEGORY)
+income = int(input())
 
 if member == '1':
-    M = 4750
-    print(lc.TXT_CATEGORY)
-    income = int(input())
     if 0 <= income <= 9075:
         N = 0.1 * income
     elif income <= 36900:
@@ -29,14 +31,19 @@ if member == '1':
     elif income >= 406751:
         N = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
                     405100 - 186351) + 0.35 * (406750 - 405101) + 0.396 * (income - 406751)
+        M = 4750
+        N1 = 12 * (N - M)
+        print(lc.RESULT_1, income)
+        print(lc.RESULT_2, N)
+        print(lc.RESULT_3, M)
+        print(lc.RESULT_4, N1)
+
     else:
         print(lc.ERROR)
 
 
 elif member == '2':
     M = 7950
-    print(lc.TXT_CATEGORY)
-    income = int(input())
     seven = income - 457600
     if seven < 0:
         seven = 0
@@ -61,9 +68,7 @@ elif member == '2':
     N = one * 0.1 + two * 0.15 + three * 0.25 + foure * 0.28 + five * 0.33 + six * 0.35 + seven * 0.396
 
 elif member == '3':
-    M =
-    print(lc.TXT_CATEGORY)
-    income = int(input())
+    M = 5550
     if 0 <= income <= 12950:
         N = 0.1 * income
     elif income <= 49400:
@@ -91,8 +96,3 @@ elif member == 2:
     person = lc.PERSON_2
 else:
     person = lc.PERSON_3
-    N1 = 12*(N-M)
-print(lc.RESULT_1, income)
-print(lc.RESULT_2, N)
-print(lc.RESULT_3, M)
-print(lc.RESULT_4, N1)
