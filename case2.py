@@ -7,6 +7,7 @@ import local as lc
 
 print(lc.HELLO)
 member = int(input())
+
 if member == '1':
     M = 4750
     print(lc.TXT_CATEGORY)
@@ -60,7 +61,7 @@ elif member == '2':
     N = one * 0.1 + two * 0.15 + three * 0.25 + foure * 0.28 + five * 0.33 + six * 0.35 + seven * 0.396
 
 elif member == '3':
-    M = 5000
+    M =
     print(lc.TXT_CATEGORY)
     income = int(input())
     if 0 <= income <= 12950:
