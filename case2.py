@@ -10,6 +10,7 @@ member = int(input())
 income = int(input())
 N = 0
 M = 0
+N1 = 0
 if member == 1:
     M = int(input(4750))
     print(lc.TXT_CATEGORY)
