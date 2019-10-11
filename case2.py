@@ -7,9 +7,9 @@ import local as lc
 
 print(lc.HELLO)
 member = int(input())
-
-if member == '1':
-    M = 4750
+income = int(input())
+if member == 1:
+    M = int(input(4750))
     print(lc.TXT_CATEGORY)
     income = int(input())
     if 0 <= income <= 9075:
@@ -33,7 +33,7 @@ if member == '1':
         print(lc.ERROR)
 
 
-elif member == '2':
+elif member == 3:
     M = 7950
     print(lc.TXT_CATEGORY)
     income = int(input())
@@ -59,9 +59,10 @@ elif member == '2':
     if one < 0:
         one = 0
     N = one * 0.1 + two * 0.15 + three * 0.25 + foure * 0.28 + five * 0.33 + six * 0.35 + seven * 0.396
+    N1 = 12 * (N - M)
 
-elif member == '3':
-    M =
+elif member == 3:
+    M = 5500
     print(lc.TXT_CATEGORY)
     income = int(input())
     if 0 <= income <= 12950:
@@ -91,7 +92,7 @@ elif member == 2:
     person = lc.PERSON_2
 else:
     person = lc.PERSON_3
-    N1 = 12*(N-M)
+    N1 = 12*( N - M )
 print(lc.RESULT_1, income)
 print(lc.RESULT_2, N)
 print(lc.RESULT_3, M)
