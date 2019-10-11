@@ -43,7 +43,7 @@ if member == 1:
 
 
 elif member == 2:
-    mM = int(7950)
+    m = int(7950)
     seven = income - 457600
     if seven < 0:
         seven = 0
