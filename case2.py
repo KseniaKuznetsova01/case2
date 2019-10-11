@@ -2,6 +2,7 @@
 Developers:
 Kuznetsova Ksenia(0%)
 Panukova Ekaterina(0%)"""
+import import_string as import_string
 
 import local as lc
 
@@ -11,10 +12,15 @@ member = int(input())
 N: float = 0
 M: int = 0
 N1: float = 0
+name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+income = 0
+for month in name_month:
+    print(lc.TXT_CATEGORY, month)
+    income1 = float(input())
+    income += income1
+
 if member == 1:
     M = int(4750)
-    print(lc.TXT_CATEGORY)
-    income = int(input())
     if 0 <= income <= 9075:
         N = 0.1 * income
     elif income <= 36900:
