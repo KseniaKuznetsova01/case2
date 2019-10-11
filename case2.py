@@ -2,7 +2,7 @@
 Developers:
 Kuznetsova Ksenia(0%)
 Panukova Ekaterina(0%)"""
-import import_string as import_string
+import_string as import_string
 
 import local as lc
 
@@ -43,9 +43,7 @@ if member == 1:
 
 
 elif member == 2:
-    M = 7950
-    print(lc.TXT_CATEGORY)
-    income = int(input())
+    M = int(7950)
     seven = income - 457600
     if seven < 0:
         seven = 0
@@ -71,9 +69,7 @@ elif member == 2:
 
 
 elif member == 3:
-    M = 5500
-    print(lc.TXT_CATEGORY)
-    income = int(input())
+    M = int(5500)
     if 0 <= income <= 12950:
         N = 0.1 * income
     elif income <= 49400:
