@@ -2,16 +2,15 @@
 Developers:
 Kuznetsova Ksenia(0%)
 Panukova Ekaterina(0%)"""
-import_string as import_string
+
 
 import local as lc
 
 print(lc.HELLO)
 member = int(input())
-
-N: float = 0
-M: int = 0
-N1: float = 0
+n: float = 0
+m: int = 0
+n1: float = 0
 name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 income = 0
 for month in name_month:
@@ -20,24 +19,25 @@ for month in name_month:
     income += income1
 
 if member == 1:
-    M = int(4750)
+    m = int(4750)
     if 0 <= income <= 9075:
-        N = 0.1 * income
+        n = 0.1 * income
     elif income <= 36900:
-        N = 0.1 * 9075 + 0.15 * (income - 9076)
+        n = 0.1 * 9075 + 0.15 * (income - 9076)
     elif income <= 89350:
-        N = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (income - 36901)
+        n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (income - 36901)
     elif income <= 186350:
-        N = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (income - 89351)
+        n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (income - 89351)
     elif income <= 405100:
-        N = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
+        n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
                     income - 186351)
     elif income <= 406750:
-        N = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
+        n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
                     405100 - 186351) + 0.35 * (income - 405101)
     elif income >= 406751:
-        N = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
+        n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
                     405100 - 186351) + 0.35 * (406750 - 405101) + 0.396 * (income - 406751)
+
     else:
         print(lc.ERROR)
 
@@ -97,10 +97,10 @@ elif member == 2:
     person = lc.PERSON_2
 else:
     person = lc.PERSON_3
-if M > N:
-    M = N
-N1 = 12*(N - M)
-print(lc.RESULT_1, income)
-print(lc.RESULT_2, N*12)
-print(lc.RESULT_3, M*12)
-print(lc.RESULT_4, N1)
+if m > n:
+    m = n
+n1 = (n - m)
+print(lc.RESULT_1, round(income))
+print(lc.RESULT_2, round(n))
+print(lc.RESULT_3, round(m))
+print(lc.RESULT_4, round(n1))
