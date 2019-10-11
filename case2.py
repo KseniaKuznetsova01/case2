@@ -3,23 +3,29 @@ Developers:
 Kuznetsova Ksenia(0%)
 Panukova Ekaterina(0%)"""
 
+n: float = 0
+m: int = 0
+n1: float = 0
 
 import local as lc
 
 print(lc.HELLO)
+
 member = int(input())
-n: float = 0
-m: int = 0
-n1: float = 0
 name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
 income = 0
 for month in name_month:
+
     print(lc.TXT_CATEGORY, month)
+
     income1 = float(input())
     income += income1
 
+
 if member == 1:
+
     m = int(4750)
+
     if 0 <= income <= 9075:
         n = 0.1 * income
     elif income <= 36900:
@@ -37,7 +43,6 @@ if member == 1:
     elif income >= 406751:
         n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
                     405100 - 186351) + 0.35 * (406750 - 405101) + 0.396 * (income - 406751)
-
     else:
         print(lc.ERROR)
 
@@ -69,7 +74,9 @@ elif member == 2:
 
 
 elif member == 3:
+
     m = int(5500)
+
     if 0 <= income <= 12950:
         n = 0.1 * income
     elif income <= 49400:
@@ -91,15 +98,19 @@ elif member == 3:
 else:
     print(lc.ERROR)
 
+
 if member == 1:
     person = lc.PERSON_1
 elif member == 2:
     person = lc.PERSON_2
 else:
     person = lc.PERSON_3
+
+
 if m > n:
     m = n
 n1 = (n - m)
+
 print(lc.RESULT_1, round(income))
 print(lc.RESULT_2, round(n))
 print(lc.RESULT_3, round(m))
