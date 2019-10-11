@@ -12,19 +12,20 @@ import local as lc
 print(lc.HELLO)
 
 member = int(input())
-name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN',
+              'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']   # An array containing the values of the months.
 income = 0
-for month in name_month:
+for month in name_month:                                  # Loop to iterate through elements from the array.
 
     print(lc.TXT_CATEGORY, month)
 
-    income1 = float(input())
-    income += income1
+    income1 = float(input())                              # The income of the client per month.
+    income += income1                                     # Annual income of the client.
 
 
-if member == 1:
+if member == 1:                                           # When member is 1 the following conditions are met.
 
-    m = int(4750)
+    m = int(4750)                                         # Tax deduction for customers of the first category.
 
     if 0 <= income <= 9075:
         n = 0.1 * income
@@ -73,9 +74,9 @@ elif member == 2:
     n = one * 0.1 + two * 0.15 + three * 0.25 + four * 0.28 + five * 0.33 + six * 0.35 + seven * 0.396
 
 
-elif member == 3:
+elif member == 3:                                         # When member is 3 the following conditions are met.
 
-    m = int(5500)
+    m = int(5500)                                         # Tax deduction for customers of the third category.
 
     if 0 <= income <= 12950:
         n = 0.1 * income
