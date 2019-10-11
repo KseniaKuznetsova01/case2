@@ -96,8 +96,7 @@ elif member == 2:
 else:
     person = lc.PERSON_3
 if M > N:
-    M = M - N
-    N = 0
+    M = N
 N1 = 12*(N - M)
 print(lc.RESULT_1, income)
 print(lc.RESULT_2, N*12)
