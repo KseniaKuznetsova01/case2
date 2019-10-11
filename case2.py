@@ -3,9 +3,9 @@ Developers:
 Kuznetsova Ksenia(0%)
 Panukova Ekaterina(0%)"""
 
-n: float = 0
-m: int = 0
-n1: float = 0
+n: float = 0                           # Total amount of tax.
+m: int = 0                             # Tax deduction for customers.
+n1: float = 0                          # The difference between the total amount of tax and the tax payment.
 
 import local as lc
 
@@ -71,7 +71,8 @@ elif member == 2:
     one = income - two - three - four - five - six - seven
     if one < 0:
         one = 0
-    n = one * 0.1 + two * 0.15 + three * 0.25 + four * 0.28 + five * 0.33 + six * 0.35 + seven * 0.396
+    n = one * 0.1 + two * 0.15 + three * 0.25 + four * 0.28\
+        + five * 0.33 + six * 0.35 + seven * 0.396
 
 
 elif member == 3:                                         # When member is 3 the following conditions are met.
@@ -85,14 +86,14 @@ elif member == 3:                                         # When member is 3 the
     elif income <= 127550:
         n = 0.1 * 12950 + 0.15 * (49400 - 12951) + 0.25 * (income - 49401)
     elif income <= 206600:
-        n = 0.1 * 12950 + 0.15 * (49400 - 12951) + 0.25 * (127550 - 49401) + 0.28 * (206600 - 127551) + 0.33 * (
-                    income - 127551)
+        n = 0.1 * 12950 + 0.15 * (49400 - 12951) + 0.25 * (127550 - 49401) \
+            + 0.28 * (206600 - 127551) + 0.33 * (income - 127551)
     elif income <= 405100:
-        n = 0.1 * 12950 + 0.15 * (49400 - 12951) + 0.25 * (127550 - 49401) + 0.28 * (206600 - 127551) + 0.33 * (
-                    405100 - 206601) + 0.35 * (income - 405101)
+        n = 0.1 * 12950 + 0.15 * (49400 - 12951) + 0.25 * (127550 - 49401) \
+            + 0.28 * (206600 - 127551) + 0.33 * (405100 - 206601) + 0.35 * (income - 405101)
     elif income >= 432201:
-        n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
-                    405100 - 186351) + 0.35 * (432201 - 405101) + 0.396 * (income - 432201)
+        n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351)\
+            + 0.33 * (405100 - 186351) + 0.35 * (432201 - 405101) + 0.396 * (income - 432201)
     else:
         print(lc.ERROR)
 
