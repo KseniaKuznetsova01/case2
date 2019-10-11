@@ -7,12 +7,12 @@ import local as lc
 
 print(lc.HELLO)
 member = int(input())
-income = int(input())
+
 N: float = 0
 M: int = 0
 N1: float = 0
 if member == 1:
-    M = int(input(4750))
+    M = int(4750)
     print(lc.TXT_CATEGORY)
     income = int(input())
     if 0 <= income <= 9075:
@@ -36,7 +36,7 @@ if member == 1:
         print(lc.ERROR)
 
 
-elif member == 3:
+elif member == 2:
     M = 7950
     print(lc.TXT_CATEGORY)
     income = int(input())
@@ -97,6 +97,6 @@ else:
     person = lc.PERSON_3
 N1 = 12*(N - M)
 print(lc.RESULT_1, income)
-print(lc.RESULT_2, N)
-print(lc.RESULT_3, M)
+print(lc.RESULT_2, N*12)
+print(lc.RESULT_3, M*12)
 print(lc.RESULT_4, N1)
