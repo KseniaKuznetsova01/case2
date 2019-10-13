@@ -1,31 +1,31 @@
 """Case2
 Developers:
-Kuznetsova Ksenia(0%)
+Kuznetsova Ksenia(60%)
 Panukova Ekaterina(0%)"""
 
-n: float = 0                           # Total amount of tax.
-m: int = 0                             # Tax deduction for customers.
-n1: float = 0                          # The difference between the total amount of tax and the tax payment.
+n: float = 0                                      # Total amount of tax.
+m: int = 0                                        # Tax deduction for customers.
+n1: float = 0                                     # The difference between the total amount of tax and the tax payment.
 
 import local as lc
 
-print(lc.HELLO)
+print(lc.HELLO)                                   # Text from local
 
 member = int(input())
 name_month = ['JAN', 'FAB', 'MAR', 'APR', 'MAY', 'JUN',
-              'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']   # An array containing the values of the months.
+              'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']        # An array containing the values of the months.
 income = 0
-for month in name_month:                                  # Loop to iterate through elements from the array.
+for month in name_month:                                       # Loop to iterate through elements from the array.
 
-    print(lc.TXT_CATEGORY, month)
+    print(lc.TXT_CATEGORY, month)                              # Text from local
 
-    income1 = float(input())                              # The income of the client per month.
-    income += income1                                     # Annual income of the client.
+    income1 = float(input())                                   # The income of the client per month.
+    income += income1                                          # Annual income of the client.
 
 
-if member == 1:                                           # When member is 1 the following conditions are met.
+if member == 1:                                                # When member is 1 the following conditions are met.
 
-    m = int(4750)                                         # Tax deduction for customers of the first category.
+    m = int(4750)                                              # Tax deduction for customers of the first category.
 
     if 0 <= income <= 9075:
         n = 0.1 * income
@@ -45,11 +45,13 @@ if member == 1:                                           # When member is 1 the
         n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351) + 0.33 * (
                     405100 - 186351) + 0.35 * (406750 - 405101) + 0.396 * (income - 406751)
     else:
-        print(lc.ERROR)
+        print(lc.ERROR)                                        # Text from local
 
 
-elif member == 2:
-    m = int(7950)
+elif member == 2:                                              # When member is 2 the following conditions are met.
+
+    m = int(7950)                                              # Tax deduction for customers of the second category.
+
     seven = income - 457600
     if seven < 0:
         seven = 0
@@ -72,12 +74,12 @@ elif member == 2:
     if one < 0:
         one = 0
     n = one * 0.1 + two * 0.15 + three * 0.25 + four * 0.28\
-        + five * 0.33 + six * 0.35 + seven * 0.396
+        + five * 0.33 + six * 0.35 + seven * 0.396             # Tax for year
 
 
-elif member == 3:                                         # When member is 3 the following conditions are met.
+elif member == 3:                                              # When member is 3 the following conditions are met.
 
-    m = int(5500)                                         # Tax deduction for customers of the third category.
+    m = int(5500)                                              # Tax deduction for customers of the third category.
 
     if 0 <= income <= 12950:
         n = 0.1 * income
@@ -95,13 +97,13 @@ elif member == 3:                                         # When member is 3 the
         n = 0.1 * 9075 + 0.15 * (36900 - 9076) + 0.25 * (89350 - 36901) + 0.28 * (186351 - 89351)\
             + 0.33 * (405100 - 186351) + 0.35 * (432201 - 405101) + 0.396 * (income - 432201)
     else:
-        print(lc.ERROR)
+        print(lc.ERROR)                                        # Text from local
 
 else:
-    print(lc.ERROR)
+    print(lc.ERROR)                                            # Text from local
 
 
-if member == 1:
+if member == 1:                                                # Use text from local
     person = lc.PERSON_1
 elif member == 2:
     person = lc.PERSON_2
@@ -113,7 +115,8 @@ if m > n:
     m = n
 n1 = (n - m)
 
-print(lc.RESULT_1, round(income))
-print(lc.RESULT_2, round(n))
-print(lc.RESULT_3, round(m))
-print(lc.RESULT_4, round(n1))
+print(lc.CATEGORY, person)                                   # Output category
+print(lc.RESULT_1, round(income))                            # Output income
+print(lc.RESULT_2, round(n))                                 # Output tax
+print(lc.RESULT_3, round(m))                                 # Output tax deduction
+print(lc.RESULT_4, round(n1))                                # Output result
