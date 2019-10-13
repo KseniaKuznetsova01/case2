@@ -4,7 +4,7 @@ Kuznetsova Ksenia(0%)
 Panukova Ekaterina(0%)"""
 
 n: float = 0                                      # Total amount of tax.
-m: int = 0                                        # Tax deduction for customers.
+m: float = 0                                        # Tax deduction for customers.
 n1: float = 0                                     # The difference between the total amount of tax and the tax payment.
 
 import local as lc
