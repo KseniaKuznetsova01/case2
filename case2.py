@@ -4,7 +4,7 @@ Kuznetsova Ksenia(0%)
 Panukova Ekaterina(0%)"""
 
 n: float = 0                                      # Total amount of tax.
-m: float = 0                                        # Tax deduction for customers.
+m: float = 0                                      # Tax deduction for customers.
 n1: float = 0                                     # The difference between the total amount of tax and the tax payment.
 
 import local as lc
@@ -111,12 +111,12 @@ else:
     person = lc.PERSON_3
 
 
-if m > n:
+if m > n:                                                     # For tax deduction which more then tax
     m = n
 n1 = (n - m)
 
-print(lc.CATEGORY, person)                                   # Output category
-print(lc.RESULT_1, round(income))                            # Output income
-print(lc.RESULT_2, round(n))                                 # Output tax
-print(lc.RESULT_3, round(m))                                 # Output tax deduction
-print(lc.RESULT_4, round(n1))                                # Output result
+print(lc.CATEGORY, person)                                    # Output category
+print(lc.RESULT_1, round(income))                             # Output income
+print(lc.RESULT_2, round(n))                                  # Output tax
+print(lc.RESULT_3, round(m))                                  # Output tax deduction
+print(lc.RESULT_4, round(n1))                                 # Output result
