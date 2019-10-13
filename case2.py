@@ -1,6 +1,6 @@
 """Case2
 Developers:
-Kuznetsova Ksenia(0%)
+Kuznetsova Ksenia(60%)
 Panukova Ekaterina(0%)"""
 
 n: float = 0                                      # Total amount of tax.
