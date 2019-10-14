@@ -3,9 +3,9 @@ Developers:
 Kuznetsova Ksenia(60%)
 Panukova Ekaterina(0%)"""
 
-n: float = 0                                      # Total amount of tax.
-m: float = 0                                      # Tax deduction for customers.
+n: float = 0                                      # Total amount of tax.                                    # Tax deduction for customers.
 n1: float = 0                                     # The difference between the total amount of tax and the tax payment.
+m: float = 0
 
 import local as lc
 
@@ -24,8 +24,8 @@ for month in name_month:                                       # Loop to iterate
 
 
 if member == 1:                                                # When member is 1 the following conditions are met.
-
-    m = int(4750)                                              # Tax deduction for customers of the first category.
+    print(lc.TXT_TAX)
+    m = float(input())                                              # Tax deduction for customers of the first category.
 
     if 0 <= income <= 9075:
         n = 0.1 * income
@@ -48,9 +48,10 @@ if member == 1:                                                # When member is 
         print(lc.ERROR)                                        # Text from local
 
 
-elif member == 2:                                              # When member is 2 the following conditions are met.
+elif member == 2:                                                   # When member is 2 the following conditions are met.
 
-    m = int(7950)                                              # Tax deduction for customers of the second category.
+    print(lc.TXT_TAX)
+    m = float(input())                                              # Tax deduction for customers of the second category.
 
     seven = income - 457600
     if seven < 0:
@@ -79,7 +80,8 @@ elif member == 2:                                              # When member is 
 
 elif member == 3:                                              # When member is 3 the following conditions are met.
 
-    m = int(5500)                                              # Tax deduction for customers of the third category.
+    print(lc.TXT_TAX)
+    m = float(input())                                             # Tax deduction for customers of the third category.
 
     if 0 <= income <= 12950:
         n = 0.1 * income
