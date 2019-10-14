@@ -1,7 +1,7 @@
 """Case2
 Developers:
 Kuznetsova Ksenia(60%)
-Panukova Ekaterina(0%)"""
+Panukova Ekaterina(55%)"""
 
 n: float = 0                                      # Total amount of tax.                                    # Tax deduction for customers.
 n1: float = 0                                     # The difference between the total amount of tax and the tax payment.
